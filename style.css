@@ -1,0 +1,64 @@
+body {
+    background-color: #f0f8ff; /* Changed background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+    width: 300px;
+    padding: 20px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+.input-section {
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    border: 2px solid #000;
+    border-radius: 5px;
+}
+
+.buttons {
+    margin-bottom: 20px;
+}
+
+.buttons button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 0 10px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    background-color: #87CEFA; /* Button color */
+    color: white;
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    background-color: #4682B4; /* Hover color */
+}
+
+.stack {
+    border: 2px solid #000;
+    min-height: 200px;
+    border-radius: 5px;
+}
+
+.stack-item {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    background-color: #D3D3D3; /* Stack item background */
+}

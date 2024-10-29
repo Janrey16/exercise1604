@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="input-section">
+            <input type="text" id="inputValue" placeholder="Enter value">
+        </div>
+        <div class="buttons">
+            <button onclick="push()">Push</button>
+            <button onclick="pop()">Pop</button>
+        </div>
+        <div id="stack" class="stack"></div>
+    </div>
+
+    <script>
+        let stack = [];
+
+        function push() {
+            const inputValue = document.getElementById('inputValue').value;
+            if (inputValue) {
+                stack.push(inputValue);
+                updateStack();
+                document.getElementById('inputValue').value = '';
+            }
+        }
+
+        function pop() {
+            if (stack.length > 0) {
+                stack.pop();
+                updateStack();
+            }
+        }
+
+        function updateStack() {
+            const stackDiv = document.getElementById('stack');
+            stackDiv.innerHTML = '';
+            stack.forEach(item => {
+                const div = document.createElement('div');
+                div.className = 'stack-item';
+                div.textContent = item;
+                stackDiv.appendChild(div);
+            });
+        }
+    </script>
+</body>
+</html>
